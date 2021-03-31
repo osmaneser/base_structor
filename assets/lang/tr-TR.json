@@ -1,0 +1,10 @@
+{
+    "login":{
+        "title":"Giriş Yap",
+        "btnText":"Giriş",
+        "lblUsername":"Kullanıcı Adı",
+        "hintUsername":"Kullanıcı Adı",
+        "lblPassword":"Şifre",
+        "hintPassword":"Şifre"
+    }
+}

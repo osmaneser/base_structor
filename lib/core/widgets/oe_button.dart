@@ -34,7 +34,7 @@ class OeButton extends StatelessWidget {
         color: color != null ? color : themeData.primaryColor,
         splashColor: Colors.white,
         onPressed: isDisabled ? null : onTap,
-        hoverColor: Colors.blue,
+        hoverColor: themeData.primaryColor,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(5))),
         child: LocaleText(
           text: text,

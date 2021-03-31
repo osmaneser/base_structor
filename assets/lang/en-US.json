@@ -1,0 +1,10 @@
+{
+    "login":{
+        "title":"Login",
+        "btnText":"Login",
+        "lblUsername":"Username",
+        "hintUsername":"Username",
+        "lblPassword":"Password",
+        "hintPassword":"Password"
+    }
+}

@@ -59,7 +59,11 @@ class OeTextFormField extends StatelessWidget {
                   text: labelText,
                   style: labelStyle != null
                       ? labelStyle
-                      : TextStyle(color: themeData.accentColor, fontSize: 14),
+                      : TextStyle(
+                          color: themeData.primaryColor,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                        ),
                 )
               : SizedBox(),
           SizedBox(
@@ -87,9 +91,9 @@ class OeTextFormField extends StatelessWidget {
                 hintStyle: hintStyle != null
                     ? hintStyle
                     : TextStyle(
-                        color: themeData.accentColor,
+                        color: themeData.primaryColor.withOpacity(0.5),
                         fontSize: 14,
-                        fontWeight: FontWeight.w500),
+                      ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5),
                   borderSide: BorderSide(
@@ -114,8 +118,7 @@ class OeTextFormField extends StatelessWidget {
                 prefixIcon: isPrefixIcon
                     ? Icon(
                         prefixIcon,
-                        color:
-                            themeData.colorScheme.background.withOpacity(0.7),
+                        color: themeData.colorScheme.background.withOpacity(0.7),
                       )
                     : null,
               ),
