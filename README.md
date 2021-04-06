@@ -1,16 +1,10 @@
 # base_structor
 
-A new Flutter project.
+Bu proje Flutter Starter niteliği taşımak üzere temelleri atılmış küçük bir flutter projesidir. Amaç; base yapılar kullanarak yeni oluşturulacak projelerde tekrar tekrar yazılmasını istemediğimiz classları, methodları, modelleri vb gibi diğer her şeyi bu proje altında toplamak. 
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Proje Klasör yapısını temelde ikiye ayırarak Core ve Ui olarak kullanmayı tercih ettim.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Core tarafındaki her şey, başka bir projeye taşındığı durumda hiç sorunsuz çalışabilecek mantıkta kurulmaya çalışıldı.
+- Ui kısmı projeden projeye değişiklik gösterebilmektedir.
