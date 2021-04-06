@@ -1,26 +1,19 @@
+import 'package:base_structor/core/models/base_view_model.dart';
 import 'package:base_structor/core/models/request/req_sign_in.dart';
 import 'package:base_structor/core/models/request/req_sign_up.dart';
 import 'package:base_structor/core/repositories/auth_repository.dart';
 import 'package:base_structor/core/services/http_service.dart';
-import 'package:flutter/material.dart';
 
 import '../init/locator.dart';
 
-enum AuthState { Initial, Loading, Done, Error }
 
-class AuthViewModel with ChangeNotifier implements IAuthRepository {
+class AuthViewModel extends BaseViewModel implements IAuthRepository {
   AuthRepository _authRepository = locator<AuthRepository>();
 
-  AuthState _state;
-
-  get state => _state;
-  set state(AuthState value) {
-    _state = value;
-    notifyListeners();
-  }
 
   AuthViewModel() {
     print("Auth VM Init");
+    state = BaseState.Initial;
   }
 
   @override
