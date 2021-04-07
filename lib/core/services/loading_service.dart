@@ -1,13 +1,13 @@
+import 'package:base_structor/core/constants/global_constants.dart';
 import 'package:base_structor/core/widgets/locale_text.dart';
 import 'package:flutter/material.dart';
 
 class LoadingService {
-  static loadingScreen(
-      {BuildContext context, bool isOpen, String message = "Lütfen bekleyiniz..."}) {
+  static loadingScreen({bool isOpen, String message = "Lütfen bekleyiniz..."}) {
     if (isOpen) {
       return showDialog(
         useRootNavigator: false,
-        context: context,
+        context: GlobalConstant.navigatorKey.currentContext,
         builder: (context) {
           return AlertDialog(
             content: SizedBox(
@@ -38,7 +38,7 @@ class LoadingService {
         },
       );
     } else {
-      Navigator.of(context).pop();
+      GlobalConstant.navigatorKey.currentState.maybePop();
     }
   }
 }

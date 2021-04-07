@@ -30,4 +30,6 @@ class Utils{
 
   static String nameAvatar(String fullName) => fullName.split(' ').length > 1 ? fullName.split(' ')[0] + fullName.split(' ')[1] : fullName.split(' ')[0];
 
+  static bool hasOwnProperty(Map map, Object key) => map.keys.where((element) => element == key).length > 0;
+
 }

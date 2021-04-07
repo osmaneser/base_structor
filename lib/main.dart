@@ -1,4 +1,5 @@
 import 'package:base_structor/core/auth/auth_view_model.dart';
+import 'package:base_structor/core/constants/global_constants.dart';
 import 'package:base_structor/core/init/locator.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    GlobalConstant.navigatorKey = locator<GlobalKey<NavigatorState>>();
     return MultiProvider(
         builder: (context, child) {
           return EasyLocalization(
@@ -25,6 +27,7 @@ class MyApp extends StatelessWidget {
           supportedLocales: Utils.supportedLanguages,
           path: "assets/lang",
           child: MaterialApp(
+            navigatorKey: GlobalConstant.navigatorKey,
             home: SignInPage(),
           ),
         );
